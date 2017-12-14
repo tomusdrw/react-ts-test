@@ -12,11 +12,15 @@ exports[`renders correctly 1`] = `
   </h3>
   <p>
     Lorem ipsum
+    <a
+      onClick={[Function]}
+    >
+       more...
+    </a>
   </p>
   <h4
     className="price"
   >
-    $
     10.00
      zł
   </h4>
