@@ -1,23 +1,6 @@
 import * as React from 'react';
 import './Product.css';
 
-export interface ProductType {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  isSpecial: boolean;
-}
-
-export const Product = ({ id, name, price, description, isSpecial }: ProductType) => (
-  <div className={`product ${isSpecial ? 'special' : ''}`}>
-    <img src={`https://xpla.org/ext/lorempixel/250/250/technics/${id}`} />
-    <h3>{name}</h3>
-    <Description {...{description}} />
-    <h4 className="price">{(price / 100).toFixed(2)} zł</h4>
-  </div>
-);
-
 class Description extends React.Component<{ description: string }, { expanded: boolean }> {
 
   state = {
@@ -48,3 +31,20 @@ class Description extends React.Component<{ description: string }, { expanded: b
     );
   }
 }
+
+export interface ProductType {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  isSpecial: boolean;
+}
+
+export const Product = ({ id, name, price, description, isSpecial }: ProductType) => (
+  <div className={`product ${isSpecial ? 'special' : ''}`}>
+    <img src={`https://xpla.org/ext/lorempixel/250/250/technics/${id}`} />
+    <h3>{name}</h3>
+    <Description {...{description}} />
+    <h4 className="price">{(price / 100).toFixed(2)} zł</h4>
+  </div>
+);

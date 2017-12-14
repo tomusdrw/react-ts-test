@@ -58,7 +58,7 @@ export class Shop extends React.Component {
 
     return (
       <React.Fragment>
-        <Link to='/order'>
+        <Link to="/order">
           <button>Your order</button>
         </Link>
         <Header
