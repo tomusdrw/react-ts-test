@@ -4,11 +4,9 @@ import * as sinon from 'sinon';
 
 import { Shop } from './Shop';
 
-import * as products from '../../../public/products.json';
-
 it('renders without crashing', done => {
   const server = sinon.fakeServer.create();
-  server.respondWith('GET', 'products.json', JSON.stringify(products));
+  server.respondWith('GET', 'products.json', JSON.stringify([]));
   render(<Shop />, document.createElement('div'));
   server.respond();
   server.restore();

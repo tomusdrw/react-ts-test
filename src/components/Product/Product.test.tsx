@@ -7,7 +7,8 @@ const product = {
   id: 5,
   name: 'Product 1',
   description: 'Lorem ipsum',
-  price: 1000
+  price: 1000,
+  isSpecial: false
 };
 
 it('renders correctly', () => {

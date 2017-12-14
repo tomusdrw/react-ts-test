@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import './Shop.css';
 
 import { Product, ProductType } from '../../components/Product';
@@ -57,6 +58,9 @@ export class Shop extends React.Component {
 
     return (
       <React.Fragment>
+        <Link to='/order'>
+          <button>Your order</button>
+        </Link>
         <Header
           sort={sort}
           reverse={reverse}

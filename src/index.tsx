@@ -3,10 +3,10 @@ import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-import { Shop } from './pages/Shop';
+import { Router } from './Router';
 
 ReactDOM.render(
-  <Shop />,
+  <Router />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();

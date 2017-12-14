@@ -2,7 +2,7 @@ import * as React from 'react';
 import './Loading.css';
 
 interface Props {
-  fullscreen: boolean;
+  fullscreen?: boolean;
 }
 
 export class Loading extends React.Component<Props> {
@@ -15,17 +15,17 @@ export class Loading extends React.Component<Props> {
     displayed: false
   };
 
-  timeout: number;
+  timeout: NodeJS.Timer;
 
   componentDidMount () {
-    this.timeout = setTimeout(
+    this.timeout = global.setTimeout(
       () => this.setState({ displayed: true }),
       100
     );
   }
 
   componentWillUnmount () {
-    clearTimeout(this.timeout);
+    global.clearTimeout(this.timeout);
   }
 
   render () {
