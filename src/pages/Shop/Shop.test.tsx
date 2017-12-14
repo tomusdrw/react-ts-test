@@ -6,7 +6,6 @@ import { Shop } from './Shop';
 
 import * as products from '../../../public/products.json';
 
-
 it('renders without crashing', done => {
   const server = sinon.fakeServer.create();
   server.respondWith('GET', 'products.json', JSON.stringify(products));
