@@ -89,10 +89,10 @@ function checkValidServiceWorker(swUrl: string) {
       ) {
         // No service worker found. Probably a different app. Reload the page.
         navigator.serviceWorker.ready.then(registration => {
-          registration.unregister().then(() => {
+          return registration.unregister().then(() => {
             window.location.reload();
           });
-        });
+        }).catch(err => console.error(err));
       } else {
         // Service worker found. Proceed as normal.
         registerValidSW(swUrl);
@@ -108,7 +108,7 @@ function checkValidServiceWorker(swUrl: string) {
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    });
+      return registration.unregister();
+    }).catch(err => console.error(err));
   }
 }

@@ -1,0 +1,12 @@
+.product {
+  padding: 15px;
+  margin: 20px;
+  background: #ddd;
+  min-width: 200px;
+  max-width: calc(33% - 70px);
+}
+
+.product img {
+  display: block;
+  width: 100%;
+}
