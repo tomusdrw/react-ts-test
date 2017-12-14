@@ -6,6 +6,10 @@
   max-width: calc(33% - 70px);
 }
 
+.product.special {
+  background: #eea;
+}
+
 .product img {
   display: block;
   width: 100%;

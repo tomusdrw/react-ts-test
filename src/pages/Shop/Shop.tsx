@@ -56,7 +56,7 @@ export class Shop extends React.Component {
     }
 
     return (
-      <div className="shop">
+      <React.Fragment>
         <Header
           sort={sort}
           reverse={reverse}
@@ -64,8 +64,24 @@ export class Shop extends React.Component {
           onSort={this.handleSort}
           onSearch={this.handleSearch}
         />
-        {products.map(product => <Product {...product} key={product.id}/>)}
-      </div>
+        <h1>Hot Deals</h1>
+        <div className="shop">
+          {
+            products
+              .filter(({isSpecial}) => isSpecial)
+              .map(product => <Product {...product} key={product.id}/>)
+          }
+        </div>
+
+        <h1>Products</h1>
+        <div className="shop">
+          {
+            products
+              .filter(({isSpecial}) => !isSpecial)
+              .map(product => <Product {...product} key={product.id}/>)
+          }
+        </div>
+      </React.Fragment>
     );
   }
 

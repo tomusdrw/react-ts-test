@@ -3,7 +3,8 @@
     "id": 1,
     "name": "iPad",
     "description": "The iPad device is roughly the size of a sheet of paper and weighs 1.5 pounds. The screen is a 9.7-inch LED backlit glossy multi-touch screen, capable of displaying up to 1024x768 pixel resolution.",
-    "price": 129900
+    "price": 129900,
+    "isSpecial": true
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "id": 3,
     "name": "Notebook",
     "description": "A laptop, often called a notebook or \"notebook computer\", is a small, portable personal computer with a \"clamshell\" form factor, an alphanumeric keyboard on the lower part of the \"clamshell\" and a thin LCD or LED computer screen on the upper part, which is opened up to use the computer.",
-    "price": 499900
+    "price": 499900,
+    "isSpecial": true
   },
   {
     "id": 6,

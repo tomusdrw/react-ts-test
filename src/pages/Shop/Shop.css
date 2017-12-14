@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+h1 {
+  text-align: center;
+}
 .header {
   display: block;
   width: 100%;

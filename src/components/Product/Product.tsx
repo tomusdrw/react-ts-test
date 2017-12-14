@@ -6,10 +6,11 @@ export interface ProductType {
   name: string;
   price: number;
   description: string;
+  isSpecial: boolean;
 }
 
-export const Product = ({ id, name, price, description }: ProductType) => (
-  <div className="product">
+export const Product = ({ id, name, price, description, isSpecial }: ProductType) => (
+  <div className={`product ${isSpecial ? 'special' : ''}`}>
     <img src={`https://xpla.org/ext/lorempixel/250/250/technics/${id}`} />
     <h3>{name}</h3>
     <Description {...{description}} />
